@@ -1,0 +1,43 @@
+
+services:
+  db:
+    image: postgres
+    container_name: smartcare_db
+    restart: always
+    environment:
+      POSTGRES_DB: smartcare_db
+      POSTGRES_USER: smartcare_user
+      POSTGRES_PASSWORD: smartcare_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: smartcare_backend
+    depends_on:
+      - db
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm start
+
+  frontend:
+    build: ./frontend
+    container_name: smartcare_frontend
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev -- --host
+
+volumes:
+  db-data:

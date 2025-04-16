@@ -1,0 +1,269 @@
+/* Container principal */
+.landing-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  /* Cabeçalho com logo */
+  .header-logo {
+    background-color: #4a90e2;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo-img {
+    width: 80px;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  /* Navegação (caso queira usar no futuro) */
+  .nav-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Seções da página */
+  section {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  /* Imagem da clínica */
+  .imagem-clinica {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 30px auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .imagem-clinica:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Equipe médica */
+  .servicos,
+  .equipe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .equipe img {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .equipe img:hover {
+    transform: scale(1.05);
+  }
+  
+  .equipe p {
+    font-weight: bold;
+  }
+  
+  /* Formulário de contato */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form input,
+  form select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #0074D9;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 116, 217, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  form input::placeholder {
+    color: #888;
+  }
+  
+  form input:focus,
+  form select:focus {
+    border-color: #005fa3;
+    box-shadow: 0 0 8px rgba(0, 116, 217, 0.3);
+    outline: none;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Seção de consulta de agendamentos */
+  .consulta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .consulta-container input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #0074D9;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    color: #333;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 116, 217, 0.1);
+  }
+  
+  .consulta-container input::placeholder {
+    color: #999;
+  }
+  
+  .consulta-container button {
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .consulta-container button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: left;
+    font-size: 0.9em;
+    color: #777;
+    margin: 40px 20px 10px
+  }
+  
+  /* Fundo da página */
+  body {
+    background: url('/assets/fundo-saude.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }  
+  /* === Estilo da página de Consultar CPF === */
+.consulta-container {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .consulta-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .consulta-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .consulta-form input {
+    padding: 12px 16px;
+    border: 2px solid #0074D9;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 250px;
+  }
+  
+  .consulta-form button {
+    padding: 12px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .consulta-form button:hover {
+    background-color: #005fa3;
+  }
+  
+  .lista-agendamentos {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .lista-agendamentos li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .lista-agendamentos button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer-fixo {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  

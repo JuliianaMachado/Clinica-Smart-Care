@@ -1,0 +1,20 @@
+import agendamento from '../models/agendamento.js';
+import profissional from '../models/profissional.js';
+
+export async function criarAagendamento(req, res) {
+  const { nome, cpf, data, profissionalId } = req.body;
+  const ag = await agendamento.create({ nome, cpf, data, profissionaleId: profissionalId });
+  res.status(201).json(ag);
+}
+
+export async function buscarPorCpf(req, res) {
+  const { cpf } = req.params;
+  const ags = await agendamento.findAll({ where: { cpf }, include: profissional });
+  res.json(ags);
+}
+
+export async function cancelarAgendamento(req, res) {
+  const { id } = req.params;
+  await agendamento.destroy({ where: { id } });
+  res.sendStatus(204);
+}
