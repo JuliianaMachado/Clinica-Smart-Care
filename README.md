@@ -9,18 +9,49 @@ Aplicação web desenvolvida para a clínica **Smart Care**, com funcionalidades
 
 ```
 /smart-care/
+│
 ├── backend/
-│   └── src/
-│       ├── models/
-│       ├── routes/
-│       ├── controllers/
-│       ├── database.js
-│       └── index.js
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── database.js
+│   │   └── index.js
+│   ├── Dockerfile
+│   └── package.json
+│
 ├── frontend/
-│   ├── public/assets/
-│   └── src/components/
+│   ├── dist/
+│   ├── node_modules/
+│   ├── public/
+│   │   └── assets/
+│   │       ├── clinica.png
+│   │       ├── fundo-saude.jpg
+│   │       ├── logo-smartcare.png
+│   │       ├── medico_cardiologista.png
+│   │       ├── medico_clinica_geral.png
+│   │       └── medico_endocrinologista.png
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ConsultaCPF.jsx
+│   │   │   ├── FormAgendamento.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── LandingPage.jsx
+│   │   ├── header.css
+│   │   ├── LandingPage.css
+│   │   ├── app.css
+│   │   ├── app.jsx
+│   │   └── main.jsx
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   └── vite.config.js
+│
 ├── docker-compose.yml
-├── README.md
+└── README.md
+
 ```
 
 ---
